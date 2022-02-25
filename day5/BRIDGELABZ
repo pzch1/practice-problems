@@ -1,0 +1,36 @@
+#!/bin/bash -x
+
+FRUIT="kiwi"
+
+case "$FRUIT" in
+"apple" )
+echo "Apple pie is tasty"
+;;
+"guava" )
+echo "guava is green"
+;;
+"kiwi" )
+echo "kiwi is very famous"
+;;
+esac
+ABOVE IS THE SWITCH CASE EXAMPLE PROGRAM
+#!/bin/bash -x
+
+isPartTime=1
+isFullTime=2
+empRatePerHr=20
+randomCheck=$((RANDOM%3))
+
+case $randomCheck in
+$isFullTime )
+empHrs=8
+;;
+$isPartTime )
+empHrs=4
+;;
+*)
+empHrs=0
+;;
+esac
+
+salary=$(($empHrs*$empRatePerHr))
